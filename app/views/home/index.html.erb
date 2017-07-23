@@ -1,8 +1,23 @@
+<%if Rails.env == "production" %>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-103057361-1', 'auto');
+    ga('send', 'Homepage Form');
+  </script>
+<%end %>
+
 <%- model_class = Post -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+<div class="page-header text-center">
+  <h1>Além das Vendas!</h1>
 </div>
-<table class="table table-striped">
+<!-- <div class="page-header text-center">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div> -->
+<!-- <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
@@ -37,10 +52,15 @@
       </tr>
     <% end %>
   </tbody>
-</table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
+</table> -->
+<div class="col-md-12 text-center"> 
+  <h4>Prepare-se para mudar a forma como conhece o setor de vendas! Reinvente-se, abra sua mente, consuma conteúdo de qualidade gratuito com possibilidades de ultrapassar barreiras. Deixar de apenas vender, mas entregar soluções de problemas para seus clientes.</h4>
+  <p></p>
+</div> 
+<div class="row"> 
+<!-- <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
-            :class => 'btn btn-primary' %>
+            :class => 'btn btn-primary' %> -->
 
-<%= render :partial => 'leads/form' %>
+<div class="col-md-8 col-md-offset-1 text-center"><%= render :partial => 'leads/form' %></div>
+</div>
