@@ -24,7 +24,7 @@ development:
   <<: *default
   database: ornitorrincos-blog_development
   username: atomicavocado
-  password: childporn
+  password: *
 
 test:
   <<: *default
