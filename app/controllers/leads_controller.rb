@@ -26,6 +26,7 @@ class LeadsController < ApplicationController
   # POST /leads.json
   def create
     @lead = Lead.new(lead_params)
+    @lead.ip = request.remote_ip
 
     respond_to do |format|
       if @lead.save
