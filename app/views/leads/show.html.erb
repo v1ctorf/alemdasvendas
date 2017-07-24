@@ -10,10 +10,8 @@
   <dd><%= @lead.email %></dd>
   <dt><strong><%= model_class.human_attribute_name(:stack) %>:</strong></dt>
   <dd><%= @lead.stack %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
-  <dd><%= @lead.city %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
-  <dd><%= @lead.state %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ip) %>:</strong></dt>
+  <dd><%= @lead.ip %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
